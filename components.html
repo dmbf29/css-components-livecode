@@ -26,6 +26,37 @@
         </p>
       </div>
 
+      <div class="scoreboard">
+        <div class="score-card">
+          <input
+            type="text"
+            class="team-name-input"
+            id="team1-name"
+            placeholder="Team 1"
+            oninput="saveTeamName(1, this.value)"
+          />
+          <div class="score-controls">
+            <button class="score-btn" onclick="changeScore(1, -1)">-</button>
+            <span class="score-value" id="team1-score">0</span>
+            <button class="score-btn" onclick="changeScore(1, 1)">+</button>
+          </div>
+        </div>
+        <div class="score-card">
+          <input
+            type="text"
+            class="team-name-input"
+            id="team2-name"
+            placeholder="Team 2"
+            oninput="saveTeamName(2, this.value)"
+          />
+          <div class="score-controls">
+            <button class="score-btn" onclick="changeScore(2, -1)">-</button>
+            <span class="score-value" id="team2-score">0</span>
+            <button class="score-btn" onclick="changeScore(2, 1)">+</button>
+          </div>
+        </div>
+      </div>
+
       <div class="bad-ui-example">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
@@ -662,6 +693,30 @@
         title.innerText = counter
         counter += 1
       })
+    </script>
+
+    <script>
+      function loadScoreboard() {
+        for (const team of [1, 2]) {
+          const name = localStorage.getItem(`team${team}-name`)
+          const score = localStorage.getItem(`team${team}-score`)
+          document.querySelector(`#team${team}-name`).value = name || ''
+          document.querySelector(`#team${team}-score`).innerText = score || 0
+        }
+      }
+
+      function saveTeamName(team, name) {
+        localStorage.setItem(`team${team}-name`, name)
+      }
+
+      function changeScore(team, delta) {
+        const scoreEl = document.querySelector(`#team${team}-score`)
+        const newScore = parseInt(scoreEl.innerText) + delta
+        scoreEl.innerText = newScore
+        localStorage.setItem(`team${team}-score`, newScore)
+      }
+
+      loadScoreboard()
     </script>
   </body>
 </html>

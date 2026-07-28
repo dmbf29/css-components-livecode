@@ -1,0 +1,31 @@
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-red {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-green {
+  background-color: #1edd88;
+  color: white;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.btn-red:hover {
+  background-color: #c0392b;
+}
+
+.btn-secondary {
+  background-color: #bdc3c7;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #95a5a6;
+}

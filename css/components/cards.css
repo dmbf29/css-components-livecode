@@ -1,0 +1,57 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px 0;
+  /* only hard coding the width for the example */
+  width: 350px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card .card-body {
+  font-size: 1.2em;
+  margin-top: 12px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-body p {
+  margin: 0;
+  font-size: 0.8em;
+  color: #555;
+}
+
+.card-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-evenly
+}
+
+.card h4 {
+  margin: 0;
+}
+
+.card-flex {
+  display: flex;
+  gap: 12px;
+  margin: 4px 0
+}
+
+.card-flex span {
+  flex: 1;
+}
+
+.bg-white {
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 28px;
+}

@@ -29,7 +29,93 @@
       <div class="bad-ui-example">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <h2>Example #1</h2>
+            <h2>Example #<span class='title-num'></span></h2>
+            <button
+              class="btn btn-secondary ms-3"
+              onclick="
+                document
+                  .querySelector('#example0original')
+                  .classList.toggle('d-none')
+              "
+            >
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              document.querySelector('#example0').classList.toggle('d-none')
+            "
+          >
+            Show Solution
+          </button>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex d-none" id="example0original">
+            <div class="card-category" style="background-image: url('images/clouds.jpg')">
+              Cloudy
+            </div>
+          </div>
+          <!-- Solution -->
+          <div class="d-flex d-none" id="example0">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/clouds.jpg')">
+              Cloudy
+            </div>
+          </div>
+        </div>
+        <p>Answer:</p>
+        <span class="spoiler-text" onclick="this.classList.toggle('revealed')">
+          <div class="bg-white">
+            When designing cards with headings and background images, it’s important to create a visual contrast between the two elements. One effective technique to achieve this is by adding a linear gradient on top of the background image with a lower level of transparency.
+          </div>
+        </span>
+      </div>
+
+      <div class="bad-ui-example">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <h2>Example #<span class='title-num'></span></h2>
+            <button
+              class="btn btn-secondary ms-3"
+              onclick="
+                document
+                  .querySelector('#example00original')
+                  .classList.toggle('d-none')
+              "
+            >
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              document.querySelector('#example00').classList.toggle('d-none')
+            "
+          >
+            Show Solution
+          </button>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex d-none" id="example00original">
+            <img src="images/categories_bad.png" alt="" width="300px" style="margin: 8px 0;">
+          </div>
+          <!-- Solution -->
+          <div class="d-flex d-none" id="example00">
+            <img src="images/categories_good.png" alt="" width="300px" style="margin-top: 8px;">
+          </div>
+        </div>
+        <p>Answer:</p>
+        <span class="spoiler-text" onclick="this.classList.toggle('revealed')">
+          <div class="bg-white">
+            Content, images, and other UI components should be organized in an easy-to-understand layout. Placing relevant content and elements in the same proximity is one of the easiest ways to add continuity to the organization of your UI design layout.
+          </div>
+        </span>
+      </div>
+
+      <div class="bad-ui-example">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <h2>Example #<span class='title-num'></span></h2>
             <button
               class="btn btn-secondary ms-3"
               onclick="
@@ -97,7 +183,7 @@
       <div class="bad-ui-example">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <h2>Example #2</h2>
+            <h2>Example #<span class='title-num'></span></h2>
             <button
               class="btn btn-secondary ms-3"
               onclick="
@@ -225,7 +311,7 @@
       <div class="bad-ui-example">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <h2>Example #3</h2>
+            <h2>Example #<span class='title-num'></span></h2>
             <button
               class="btn btn-secondary ms-3"
               onclick="
@@ -311,7 +397,7 @@
       <div class="bad-ui-example">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <h2>Example #4</h2>
+            <h2>Example #<span class='title-num'></span></h2>
             <button
               class="btn btn-secondary ms-3"
               onclick="
@@ -401,7 +487,7 @@
       <div class="bad-ui-example">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <h2>Example #5</h2>
+            <h2>Example #<span class='title-num'></span></h2>
             <button
               class="btn btn-secondary ms-3"
               onclick="
@@ -467,7 +553,7 @@
       <div class="bad-ui-example">
         <div class="d-flex justify-content-between">
           <div class="d-flex">
-            <h2>Example #6</h2>
+            <h2>Example #<span class='title-num'></span></h2>
             <button
               class="btn btn-secondary ms-3"
               onclick="
@@ -570,5 +656,12 @@
         </span>
       </div>
     </div>
+    <script>
+      let counter = 1
+      document.querySelectorAll('.title-num').forEach((title) => {
+        title.innerText = counter
+        counter += 1
+      })
+    </script>
   </body>
 </html>
